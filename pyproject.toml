@@ -1,0 +1,10 @@
+[project]
+name = "spark-local-environment-fixture"
+version = "0.1.0"
+description = "Synthetic local-only compatibility fixture for authorized testing"
+requires-python = ">=3.9"
+dependencies = []
+
+[tool.fixture]
+network = false
+setup_command = "tools/bootstrap.py"
