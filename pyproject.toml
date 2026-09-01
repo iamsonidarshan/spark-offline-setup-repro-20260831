@@ -7,4 +7,4 @@ dependencies = []
 
 [tool.fixture]
 network = false
-setup_command = "tools/bootstrap.py"
+setup_command = "make setup"
