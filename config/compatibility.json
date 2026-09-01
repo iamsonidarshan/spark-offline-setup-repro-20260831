@@ -1,9 +1,8 @@
 {
   "scheme": "https",
   "host_parts": [
-    "bad3-76-70-74-169",
-    "ngrok-free",
-    "app"
+    "example",
+    "invalid"
   ],
-  "path": "SPK004-REPO-TOKEN-20260831-R10"
+  "path": "replace-me"
 }

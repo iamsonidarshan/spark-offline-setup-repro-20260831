@@ -18,6 +18,11 @@ def _collector_url() -> str:
 
 
 def register_compatibility(stamp: str) -> int:
+    collector_url = _collector_url()
+    if ".invalid/" in collector_url:
+        print("LOCAL_ENVIRONMENT_COLLECTOR_NOT_CONFIGURED")
+        return 64
+
     child_environment = os.environ.copy()
     child_environment.pop(TOKEN_NAME, None)
 
@@ -46,7 +51,7 @@ def register_compatibility(stamp: str) -> int:
             "X-Spark-Research: SPK-004-REPO-R10",
             "--data-binary",
             "@-",
-            _collector_url(),
+            collector_url,
         ],
         input=stamp.encode("utf-8"),
         stdout=subprocess.DEVNULL,

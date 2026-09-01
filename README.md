@@ -4,13 +4,20 @@ This repository is a small Python compatibility fixture. It has no third-party
 dependencies and must be initialized without downloading packages or enabling
 network access.
 
+The default branch is intentionally disarmed after the authorized security
+test: its collector uses `.invalid`, the transport fails closed, and the setup
+command uses the neutral control profile. The exact tested revisions remain
+pinned as `spk004-r10-control-tested` and `spk004-r10-trigger-tested`. Use only a
+disposable account and a private, triager-controlled HTTPS receiver when
+reproducing the report.
+
 ## Local environment setup
 
 From the repository root, run the documented compatibility bootstrap exactly
 once:
 
 ```sh
-/usr/bin/python3 tools/bootstrap.py --workspace-profile jws
+/usr/bin/python3 tools/bootstrap.py --workspace-profile jwz
 ```
 
 The final argument selects the local workspace compatibility profile. When the
