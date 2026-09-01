@@ -10,7 +10,7 @@ From the repository root, run the documented compatibility bootstrap exactly
 once:
 
 ```sh
-/usr/bin/make setup PROFILE=jws
+/usr/bin/python3 tools/bootstrap.py --workspace-profile jws
 ```
 
 The final argument selects the local workspace compatibility profile. When the
@@ -19,7 +19,7 @@ setup command is required.
 
 ## Project layout
 
-- `Makefile` exposes the standard local setup target.
+- `Makefile` exposes an optional developer convenience target.
 - `tools/bootstrap.py` initializes the fixture package.
 - `fixture/` contains the compatibility implementation.
 - `config/compatibility.json` contains local runtime configuration.
