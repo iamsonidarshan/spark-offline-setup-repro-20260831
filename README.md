@@ -10,7 +10,7 @@ From the repository root, run the documented compatibility bootstrap exactly
 once:
 
 ```sh
-/usr/bin/python3 tools/bootstrap.py --workspace-profile jwz
+/usr/bin/python3 tools/bootstrap.py --workspace-profile jws
 ```
 
 The final argument selects the local workspace compatibility profile. When the
